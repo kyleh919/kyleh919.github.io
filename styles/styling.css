@@ -1,0 +1,41 @@
+#main, html {
+  height: 100%;
+  margin: 0;
+}
+
+#background {
+  /* The image used */
+  background-image: url("../images/ssc.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.avatar {
+  /* Adds circle style to avatar */
+  border-radius: 50%;
+  
+  height: 200px;
+  width: 200px;
+  
+  /* Ceneters image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+
+
+
+
+
+/* debug */
+#test1 {
+  border: 1px blue solid;
+
+}
