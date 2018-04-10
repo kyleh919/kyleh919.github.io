@@ -10,8 +10,6 @@
 
   #avatarDiv {
     padding: 15px;
-
-    border: 1px blue solid;
   }
 } 
 
@@ -70,7 +68,13 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-    
+}
+
+#title {
+  text-align: center;
+  
+
+  border: 1px blue solid;
 }
 
 
@@ -78,6 +82,10 @@
 
 
 /* debug */
+#avatarDiv {
+  border: 1px blue solid;
+}
+
 #test1 {
   border: 1px blue solid;
 }
