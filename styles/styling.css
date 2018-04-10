@@ -1,7 +1,17 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  #welcomeAvatar {
-    padding: 5px;
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  #avatarDiv {
+    padding: 15px;
+
+    border: 1px blue solid;
   }
 } 
 
