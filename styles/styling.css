@@ -96,7 +96,7 @@
   text-align: center;
   color: white;
 
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
 }
 
 .navBtn {
@@ -111,7 +111,7 @@
 
 /* debug */
 #avatarDiv {
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
 }
 
 #test1 {
