@@ -1,11 +1,11 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   #avatarDiv {
@@ -72,7 +72,7 @@
 
 #title {
   text-align: center;
-  
+  color: white;
 
   border: 1px blue solid;
 }
