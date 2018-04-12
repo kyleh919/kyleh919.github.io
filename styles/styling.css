@@ -33,6 +33,10 @@
     width: 150px;
     height: 35px;
   }
+
+  .navBtn:hover {
+    background-color: #aef0fd;
+  }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -103,8 +107,15 @@
   color: white;
   background-color: #99d3df;
   
+  /* adds curved corners to buttons */
   border: none;
   border-radius: 3px;
+
+  /* adds a shadow around buttons to look less flat */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  /* adds the hand pointer to the buttons */
+  cursor: pointer;
 }
 
 
