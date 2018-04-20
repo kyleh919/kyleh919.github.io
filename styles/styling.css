@@ -11,7 +11,7 @@
 
   /* id */
   #avatarDiv {
-    padding: 15px;
+    padding-top: 15px;
   }
 
   #title {
@@ -19,13 +19,16 @@
   }
 
   #contactBtn {
-    /* visibility: hidden; */
     display: none;
+  }
+
+  #socialDiv {
+    padding-top: 5px;
   }
 
   /* class */
   .navBtnDiv {
-    padding-top: 8px;
+    /* padding-top: 8px; */
     padding-bottom: 8px;
     
     display: flex;
