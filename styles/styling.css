@@ -142,21 +142,11 @@
   height: 50px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 5px 15px;
   border-radius: 50%;
 
   /* adds a shadow around buttons to look less flat */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.fab {
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
 }
 
 .fa-envelope {
@@ -168,7 +158,6 @@
 .fa-envelope:hover {
   background: #0d73a3;
   color: white;
-  /* opacity: 0.8; */
 
   text-decoration: none;
 }
@@ -182,7 +171,6 @@
 .fa-linkedin:hover {
   background: #0195da;
   color: white;
-  /* opacity: 0.8; */
 
   text-decoration: none;
 }
@@ -196,7 +184,6 @@
 .fa-instagram:hover {
   background: #1977bb;
   color: white;
-  /* opacity: 0.8; */
 
   text-decoration: none;
 }
@@ -210,7 +197,6 @@
 .fa-twitter:hover {
   background: rgb(90, 183, 253);
   color: white;
-  /* opacity: 0.8; */
 
   text-decoration: none;
 }
