@@ -18,6 +18,11 @@
     padding: 10px;
   }
 
+  #contactBtn {
+    /* visibility: hidden; */
+    display: none;
+  }
+
   /* class */
   .navBtnDiv {
     padding-top: 8px;
@@ -132,6 +137,30 @@
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 50%;
+}
+
+.fab {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-envelope {
+  padding-top: 8px;
+  background: #052f42;
+  color: white;
+}
+
+.fa-envelope:hover {
+  background: #0d73a3;
+  color: white;
+  /* opacity: 0.8; */
+
+  text-decoration: none;
 }
 
 .fa-linkedin {
