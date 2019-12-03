@@ -1,217 +1,150 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  /* elements */
-  h1 {
-    font-size: 38px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  /* id */
-  #avatarDiv {
-    padding-top: 15px;
-  }
-
-  #title {
-    padding: 10px;
-  }
-
-  #contactBtn {
-    display: none;
-  }
-
-  #socialDiv {
-    padding-top: 5px;
-  }
-
-  #nav {
-    /* padding-bottom: 5px; */
-  }
-
-  /* class */
-  .navBtnDiv {
-    /* padding-top: 8px; */
-    padding-bottom: 12px;
-    
-    display: flex;
-    justify-content: center;
-  }
-
-  .navBtn {
-    font-size: 18px;
-
-    width: 150px;
-    height: 35px;
-  }
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+:root {
+  /* --background-color: #333333; */
+  --background-color: #212121;
+  --primary-text-color: #ffffff;
+  --primary-color: #00b3ff;
 }
 
-#main, html {
-  height: 100%;
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--background-color);
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
 }
 
-#background {
-  /* The image used */
-  background-image: url("../images/ssc.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  /* if there is a need for scroll the background image stays */
-  overflow: auto;
+h1,
+h3 {
+  color: var(--primary-text-color);
 }
 
-.avatar {
-  /* Adds circle style to avatar */
-  border-radius: 50%;
-  
-  height: 200px;
-  width: 200px;
-  
-  /* Ceneters image */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+h1.heading-lg {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
 
-  /* adds a shadow around buttons to look less flat */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 0;
+}
+h3.heading-sm {
+  font-size: 2rem;
+
+  margin: 1.25rem;
+  padding: 0.5rem 0.5rem;
 }
 
-#title {
-  text-align: center;
-  color: white;
-
-  /* border: 1px blue solid; */
+a {
+  color: var(--primary-text-color);
+  text-decoration: none;
 }
 
-.navBtn {
-  color: white;
-  background-color: #99d3df;
-  
-  /* adds curved corners to buttons */
-  border: none;
-  border-radius: 3px;
-
-  /* adds a shadow around buttons to look less flat */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
-
-  /* adds the hand pointer to the buttons */
+.menu-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
   cursor: pointer;
+  transition: all 0.25s ease-out;
+  z-index: 3;
+}
+.menu-btn.close {
+  transform: rotate(90deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  visibility: hidden;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+.menu-btn .btn-line {
+  background: #ffffff;
+  margin: 0 0 5px 0;
+  width: 25px;
+  height: 3px;
 }
 
-.navBtn:hover {
-  background-color: #aef0fd;
+.menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.98;
 }
-
-/* social buttons */
-#socialDiv {
+.menu.show {
+  visibility: visible;
+}
+.menu-picture,
+.menu-nav {
   display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
 }
-
-.fa {
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 15px;
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: black;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.5s ease-out;
+}
+.menu-nav.show {
+  /* visibility: visible; */
+  transform: translate3d(0, 0, 0);
+}
+.menu-picture {
+  background: #0a0a0a;
+  transform: translate3d(0, 100%, 0);
+  transition: all 0.5s ease-out;
+}
+.menu-picture.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu-picture .my-picture {
+  width: 250px;
+  height: 250px;
+  background: url("../images/me.jpeg");
   border-radius: 50%;
-
-  /* adds a shadow around buttons to look less flat */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: solid 3px var(--primary-color);
 }
 
-.fa-envelope {
-  padding-top: 8px;
-  background: #052f42;
-  color: white;
-}
-
-.fa-envelope:hover {
-  background: #0d73a3;
-  color: white;
-
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 400;
+  color: #fff;
   text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.menu .nav-link:hover {
+  color: var(--primary-color);
 }
 
-.fa-linkedin {
-  padding-top: 10px;
-  background: #007bb5;
-  color: white;
+main {
+  /* border: 1px solid red; */
+
+  padding: 5rem;
+  margin-top: 20vh;
 }
 
-.fa-linkedin:hover {
-  background: #0195da;
-  color: white;
-
-  text-decoration: none;
+main .icons {
+  margin: 1.25rem;
 }
 
-.fa-instagram {
-  padding-top: 10px;
-  background: #125688;
-  color: white;
+main .icons a {
+  padding: 0.75rem;
 }
 
-.fa-instagram:hover {
-  background: #1977bb;
-  color: white;
-
-  text-decoration: none;
+main .icons a:hover {
+  color: var(--primary-color);
+  transition: all 0.5s ease-out;
 }
 
-.fa-twitter {
-  padding-top: 10px;
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-twitter:hover {
-  background: rgb(90, 183, 253);
-  color: white;
-
-  text-decoration: none;
-}
-
-
-/* debug */
-#avatarDiv {
-  /* border: 1px blue solid; */
-}
-
-#test1 {
-  border: 1px blue solid;
-}
-
-#test2 {
-  border: 1px black solid;
+.text-secondary {
+  color: var(--primary-color);
 }
